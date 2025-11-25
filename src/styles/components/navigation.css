@@ -1,0 +1,41 @@
+/* Navigation Component */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--container-padding);
+}
+
+.nav__logo {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm) 0;
+}
+
+.nav__logo-icon {
+  height: 36px;
+  width: auto;
+}
+
+.nav__menu {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+}
+
+.nav__link {
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-regular);
+  line-height: 28px;
+  color: var(--color-black);
+  transition: opacity 0.2s ease;
+}
+
+.nav__link:hover {
+  opacity: 0.7;
+}
+
+.nav__cta {
+  margin-left: var(--spacing-lg);
+}

@@ -1,0 +1,49 @@
+/* Design Tokens from Figma */
+:root {
+  /* Colors */
+  --color-green: #b9ff66;
+  --color-dark: #191a23;
+  --color-grey: #f3f3f3;
+  --color-black: #000000;
+  --color-white: #ffffff;
+
+  /* Typography - Font Family */
+  --font-family: "Space Grotesk", sans-serif;
+
+  /* Typography - Font Weights */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+
+  /* Typography - Font Sizes */
+  --font-size-h1: 60px;
+  --font-size-h2: 40px;
+  --font-size-h3: 30px;
+  --font-size-h4: 20px;
+  --font-size-body: 18px;
+  --font-size-small: 16px;
+
+  /* Line Heights */
+  --line-height-tight: 1;
+  --line-height-normal: 1.4;
+  --line-height-relaxed: 1.56; /* 28px / 18px */
+
+  /* Spacing */
+  --spacing-xs: 5px;
+  --spacing-sm: 10px;
+  --spacing-md: 20px;
+  --spacing-lg: 40px;
+  --spacing-xl: 60px;
+  --spacing-2xl: 100px;
+
+  /* Border Radius */
+  --radius-sm: 7px;
+  --radius-md: 14px;
+  --radius-lg: 45px;
+
+  /* Shadows */
+  --shadow-card: 0 5px 0 0 var(--color-dark);
+
+  /* Container */
+  --container-max-width: 1240px;
+  --container-padding: 100px;
+}

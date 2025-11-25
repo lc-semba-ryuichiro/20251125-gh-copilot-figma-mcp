@@ -1,0 +1,69 @@
+/* Container Layout */
+.container {
+  width: 100%;
+  max-width: calc(var(--container-max-width) + var(--container-padding) * 2);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+/* Section spacing */
+.section {
+  padding: 70px 0;
+}
+
+/* Flex utilities */
+.flex {
+  display: flex;
+}
+
+.flex--column {
+  flex-direction: column;
+}
+
+.flex--wrap {
+  flex-wrap: wrap;
+}
+
+.flex--center {
+  align-items: center;
+  justify-content: center;
+}
+
+.flex--between {
+  justify-content: space-between;
+}
+
+.flex--start {
+  align-items: flex-start;
+}
+
+/* Gap utilities */
+.gap-sm {
+  gap: var(--spacing-sm);
+}
+
+.gap-md {
+  gap: var(--spacing-md);
+}
+
+.gap-lg {
+  gap: var(--spacing-lg);
+}
+
+.gap-xl {
+  gap: var(--spacing-xl);
+}
+
+/* Grid for cards */
+.grid {
+  display: grid;
+  gap: var(--spacing-lg);
+}
+
+.grid--2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3 {
+  grid-template-columns: repeat(3, 1fr);
+}

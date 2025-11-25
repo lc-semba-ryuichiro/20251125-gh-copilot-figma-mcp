@@ -11,6 +11,8 @@ catalog:
   '@storybook/addon-mcp': ^0.1.4
   '@storybook/addon-themes': ^10.0.8
   '@storybook/addon-vitest': ^10.0.8
+  '@storybook/html': ^10.0.8
+  '@storybook/html-vite': ^10.0.8
   '@storybook/mdx2-csf': ^1.1.0
   '@storybook/test-runner': ^0.24.1
   chromatic: ^13.3.4
@@ -27,6 +29,7 @@ catalog:
   secretlint: ^11.2.5
   storybook: ^10.0.8
   typescript: ^5.9.3
+  vite: ^6.3.5
 
 catalogMode: strict
 

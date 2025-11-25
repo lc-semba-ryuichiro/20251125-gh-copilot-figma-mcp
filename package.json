@@ -1,8 +1,11 @@
 {
   "name": "20251125-gh-copilot-figma-mcp",
   "version": "1.0.0",
-  "description": "",
+  "type": "module",
+  "description": "Positivus Design System - HTML/CSS Components with Storybook",
   "scripts": {
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Ryuichiro Semba",
@@ -21,6 +24,8 @@
     "@storybook/addon-mcp": "catalog:",
     "@storybook/addon-themes": "catalog:",
     "@storybook/addon-vitest": "catalog:",
+    "@storybook/html": "catalog:",
+    "@storybook/html-vite": "catalog:",
     "@storybook/mdx2-csf": "catalog:",
     "@storybook/test-runner": "catalog:",
     "chromatic": "catalog:",
@@ -36,6 +41,7 @@
     "remark-toc": "catalog:",
     "secretlint": "catalog:",
     "storybook": "catalog:",
-    "typescript": "catalog:"
+    "typescript": "catalog:",
+    "vite": "catalog:"
   }
 }

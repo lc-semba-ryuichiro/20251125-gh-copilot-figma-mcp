@@ -1,0 +1,59 @@
+/* Typography Styles */
+
+/* Google Fonts import */
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500&display=swap");
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-black);
+  line-height: var(--line-height-normal);
+}
+
+/* Headings */
+h1,
+.h1 {
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-tight);
+}
+
+h2,
+.h2 {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-tight);
+}
+
+h3,
+.h3 {
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-tight);
+}
+
+h4,
+.h4 {
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-tight);
+}
+
+/* Body text */
+p {
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-normal);
+}
+
+/* Small text */
+.text-small {
+  font-size: var(--font-size-small);
+}
+
+/* Link styles */
+a {
+  font-size: var(--font-size-h4);
+  line-height: var(--line-height-relaxed);
+}
