@@ -1,0 +1,74 @@
+<!-- Contact Us Component -->
+<div class="contact-us">
+  <form class="contact-us__form">
+    <!-- Radio Buttons -->
+    <div class="contact-us__radio-group">
+      <label class="contact-us__radio">
+        <input
+          type="radio"
+          name="contact-type"
+          value="say-hi"
+          class="contact-us__radio-input"
+          checked
+        />
+        <span class="contact-us__radio-text">Say Hi</span>
+      </label>
+      <label class="contact-us__radio">
+        <input
+          type="radio"
+          name="contact-type"
+          value="get-quote"
+          class="contact-us__radio-input"
+        />
+        <span class="contact-us__radio-text">Get a Quote</span>
+      </label>
+    </div>
+
+    <!-- Form Fields -->
+    <div class="contact-us__fields">
+      <!-- Name Field -->
+      <div class="input" style="width: 556px;">
+        <label class="input__label" for="contact-name">Name</label>
+        <input
+          type="text"
+          id="contact-name"
+          class="input__field"
+          placeholder="Name"
+        />
+      </div>
+
+      <!-- Email Field -->
+      <div class="input" style="width: 556px;">
+        <label class="input__label" for="contact-email">Email*</label>
+        <input
+          type="email"
+          id="contact-email"
+          class="input__field"
+          placeholder="Email"
+          required
+        />
+      </div>
+
+      <!-- Message Field -->
+      <div class="input" style="width: 556px;">
+        <label class="input__label" for="contact-message">Message*</label>
+        <textarea
+          id="contact-message"
+          class="input__field input__field--textarea"
+          placeholder="Message"
+          required
+        ></textarea>
+      </div>
+    </div>
+
+    <!-- Submit Button -->
+    <button type="submit" class="contact-us__submit">
+      Send Message
+    </button>
+  </form>
+
+  <!-- Illustration -->
+  <div class="contact-us__illustration">
+    <!-- SVG illustration would go here -->
+  </div>
+</div>

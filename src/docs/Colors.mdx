@@ -1,0 +1,59 @@
+{/* Colors - Positivus Design System */}
+
+import { Meta, ColorPalette, ColorItem } from '@storybook/addon-docs/blocks';
+
+<Meta title="Design Guidelines/カラー" />
+
+# カラーパレット
+
+Positivus デザインシステムで使用するカラーパレットです。
+
+<ColorPalette>
+  <ColorItem
+    title="Green（グリーン）"
+    subtitle="アクセントカラー"
+    colors={{ Green: '#B9FF66' }}
+  />
+  <ColorItem
+    title="Dark（ダーク）"
+    subtitle="プライマリカラー"
+    colors={{ Dark: '#191A23' }}
+  />
+  <ColorItem
+    title="Grey（グレー）"
+    subtitle="背景色"
+    colors={{ Grey: '#F3F3F3' }}
+  />
+  <ColorItem
+    title="Black（ブラック）"
+    subtitle="テキストカラー"
+    colors={{ Black: '#000000' }}
+  />
+  <ColorItem
+    title="White（ホワイト）"
+    subtitle="背景色・テキストカラー"
+    colors={{ White: '#FFFFFF' }}
+  />
+</ColorPalette>
+
+## CSS カスタムプロパティ
+
+```css
+:root {
+  --color-green: #B9FF66;
+  --color-dark: #191A23;
+  --color-grey: #F3F3F3;
+  --color-black: #000000;
+  --color-white: #FFFFFF;
+}
+```
+
+## 使用例
+
+| カラー | 用途 |
+|--------|------|
+| Green | ラベル背景、ターシャリボタン、アクセント |
+| Dark | プライマリボタン、テキスト、フッター背景 |
+| Grey | セクション背景、カード背景 |
+| Black | テキスト |
+| White | 背景、ダーク背景上のテキスト |

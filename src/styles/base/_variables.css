@@ -14,13 +14,20 @@
   --font-weight-regular: 400;
   --font-weight-medium: 500;
 
-  /* Typography - Font Sizes */
+  /* Typography - Font Sizes (Desktop) */
   --font-size-h1: 60px;
   --font-size-h2: 40px;
   --font-size-h3: 30px;
   --font-size-h4: 20px;
   --font-size-body: 18px;
   --font-size-small: 16px;
+
+  /* Typography - Font Sizes (Mobile) */
+  --font-size-h1-mobile: 43px;
+  --font-size-h2-mobile: 36px;
+  --font-size-h3-mobile: 26px;
+  --font-size-h4-mobile: 18px;
+  --font-size-body-mobile: 16px;
 
   /* Line Heights */
   --line-height-tight: 1;

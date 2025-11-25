@@ -34,8 +34,8 @@
   border: 1px solid var(--color-dark);
 }
 
-/* Green Button */
-.button--green {
+/* Tertiary Button - Green background */
+.button--tertiary {
   background-color: var(--color-green);
   color: var(--color-black);
   border: none;

@@ -8,7 +8,9 @@
 /* Components */
 @import "./components/button.css";
 @import "./components/card.css";
+@import "./components/contact-us.css";
 @import "./components/heading.css";
+@import "./components/icon.css";
 @import "./components/logo.css";
 @import "./components/navigation.css";
 @import "./components/link.css";

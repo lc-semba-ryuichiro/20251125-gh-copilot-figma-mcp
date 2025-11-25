@@ -1,0 +1,117 @@
+{/* Spacing - Positivus Design System */}
+
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Design Guidelines/スペーシング" />
+
+# スペーシング
+
+Positivus デザインシステムで使用するスペーシング値です。
+
+## スペーシングスケール
+
+<table>
+  <thead>
+    <tr>
+      <th>トークン</th>
+      <th>値</th>
+      <th>用途例</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td><code>--spacing-xs</code></td><td>5px</td><td>極小の余白</td></tr>
+    <tr><td><code>--spacing-sm</code></td><td>10px</td><td>小さな余白、アイテム間のギャップ</td></tr>
+    <tr><td><code>--spacing-md</code></td><td>20px</td><td>中サイズの余白、セクション内パディング</td></tr>
+    <tr><td><code>--spacing-lg</code></td><td>40px</td><td>大きな余白、セクション間のギャップ</td></tr>
+    <tr><td><code>--spacing-xl</code></td><td>60px</td><td>極大の余白</td></tr>
+    <tr><td><code>--spacing-2xl</code></td><td>100px</td><td>コンテナパディング</td></tr>
+  </tbody>
+</table>
+
+## ボーダー半径
+
+<table>
+  <thead>
+    <tr>
+      <th>トークン</th>
+      <th>値</th>
+      <th>用途例</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td><code>--radius-sm</code></td><td>7px</td><td>ラベル、小さなタグ</td></tr>
+    <tr><td><code>--radius-md</code></td><td>14px</td><td>ボタン、カード</td></tr>
+    <tr><td><code>--radius-lg</code></td><td>45px</td><td>大きな角丸</td></tr>
+  </tbody>
+</table>
+
+## コンテナ
+
+<table>
+  <thead>
+    <tr>
+      <th>トークン</th>
+      <th>値</th>
+      <th>用途例</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td><code>--container-max-width</code></td><td>1240px</td><td>メインコンテナの最大幅</td></tr>
+    <tr><td><code>--container-padding</code></td><td>100px</td><td>コンテナの左右パディング</td></tr>
+  </tbody>
+</table>
+
+## CSS カスタムプロパティ
+
+```css
+:root {
+  /* Spacing */
+  --spacing-xs: 5px;
+  --spacing-sm: 10px;
+  --spacing-md: 20px;
+  --spacing-lg: 40px;
+  --spacing-xl: 60px;
+  --spacing-2xl: 100px;
+
+  /* Border Radius */
+  --radius-sm: 7px;
+  --radius-md: 14px;
+  --radius-lg: 45px;
+
+  /* Container */
+  --container-max-width: 1240px;
+  --container-padding: 100px;
+
+  /* Shadows */
+  --shadow-card: 0 5px 0 0 var(--color-dark);
+}
+```
+
+## ビジュアル例
+
+<div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+  <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+    <div style={{ width: '5px', height: '24px', backgroundColor: '#B9FF66', borderRadius: '4px' }} />
+    <span>--spacing-xs (5px)</span>
+  </div>
+  <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+    <div style={{ width: '10px', height: '24px', backgroundColor: '#B9FF66', borderRadius: '4px' }} />
+    <span>--spacing-sm (10px)</span>
+  </div>
+  <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+    <div style={{ width: '20px', height: '24px', backgroundColor: '#B9FF66', borderRadius: '4px' }} />
+    <span>--spacing-md (20px)</span>
+  </div>
+  <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+    <div style={{ width: '40px', height: '24px', backgroundColor: '#B9FF66', borderRadius: '4px' }} />
+    <span>--spacing-lg (40px)</span>
+  </div>
+  <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+    <div style={{ width: '60px', height: '24px', backgroundColor: '#B9FF66', borderRadius: '4px' }} />
+    <span>--spacing-xl (60px)</span>
+  </div>
+  <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+    <div style={{ width: '100px', height: '24px', backgroundColor: '#B9FF66', borderRadius: '4px' }} />
+    <span>--spacing-2xl (100px)</span>
+  </div>
+</div>

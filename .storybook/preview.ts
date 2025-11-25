@@ -18,6 +18,15 @@ const preview: Preview = {
       },
     },
     layout: "centered",
+    options: {
+      storySort: {
+        order: [
+          "Design Guidelines",
+          ["概要", "カラー", "タイポグラフィ", "スペーシング"],
+          "Components",
+        ],
+      },
+    },
   },
 };
 

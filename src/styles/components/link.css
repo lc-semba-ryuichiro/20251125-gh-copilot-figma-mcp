@@ -38,3 +38,8 @@
 .link--white {
   color: var(--color-white);
 }
+
+/* Simple arrow variants - green text */
+.link--arrow.link--green {
+  color: var(--color-green);
+}

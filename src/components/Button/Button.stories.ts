@@ -2,11 +2,16 @@ import type { Meta, StoryObj } from "@storybook/html";
 
 interface ButtonArgs {
   label: string;
-  variant: "primary" | "secondary" | "green";
+  variant: "primary" | "secondary" | "tertiary";
 }
 
 /**
  * ボタン要素を作成する
+ * Figma デザインに基づいた実装
+ * - padding: 20px 35px
+ * - border-radius: 14px
+ * - font-size: 20px
+ * - line-height: 28px
  */
 const createButton = ({ label, variant }: ButtonArgs): HTMLButtonElement => {
   const button = document.createElement("button");
@@ -26,16 +31,37 @@ const meta: Meta<ButtonArgs> = {
     },
     variant: {
       control: "select",
-      options: ["primary", "secondary", "green"],
-      description: "ボタンのスタイルバリエーション",
+      options: ["primary", "secondary", "tertiary"],
+      description:
+        "ボタンのスタイルバリエーション（primary / secondary / tertiary）",
     },
   },
   parameters: {
     docs: {
       description: {
-        component:
-          "Positivus デザインシステムに基づいた複数のバリエーションを持つボタンコンポーネント。",
+        component: `
+Positivus デザインシステムに基づいたボタンコンポーネント。
+
+## デザインスペック
+| プロパティ | 値 |
+|-----------|-----|
+| padding | 20px 35px |
+| border-radius | 14px |
+| font-size | 20px |
+| line-height | 28px |
+| font-weight | 400 (Regular) |
+| font-family | Space Grotesk |
+
+## バリエーション
+- **Primary**: ダーク背景（#191A23）+ 白テキスト - メインアクション用
+- **Secondary**: アウトライン（1px solid #191A23）+ 黒テキスト - 補助アクション用
+- **Tertiary**: 緑背景（#B9FF66）+ 黒テキスト - アクセント用
+        `,
       },
+    },
+    design: {
+      type: "figma",
+      url: "https://www.figma.com/design/wvcbgLiaEjliuWGNJ8UWsj/Positivus-Landing-Page-Design--Community-?node-id=403-246",
     },
   },
   render: (args) => createButton(args),
@@ -46,7 +72,7 @@ export default meta;
 type Story = StoryObj<ButtonArgs>;
 
 /**
- * プライマリボタン - 暗い背景色、白いテキスト
+ * プライマリボタン - メインアクション用
  */
 export const Primary: Story = {
   args: {
@@ -57,14 +83,14 @@ export const Primary: Story = {
     docs: {
       description: {
         story:
-          "メインのアクションに使用するプライマリボタン。暗い背景色に白いテキスト。",
+          "メインのアクションに使用するプライマリボタン。ダーク背景色（#191A23）に白いテキスト。",
       },
     },
   },
 };
 
 /**
- * セカンダリボタン - アウトラインスタイル
+ * セカンダリボタン - 補助アクション用
  */
 export const Secondary: Story = {
   args: {
@@ -75,24 +101,25 @@ export const Secondary: Story = {
     docs: {
       description: {
         story:
-          "補助的なアクションに使用するセカンダリボタン。アウトラインスタイル。",
+          "補助的なアクションに使用するセカンダリボタン。アウトラインスタイル（1px solid #191A23）に黒いテキスト。",
       },
     },
   },
 };
 
 /**
- * グリーンボタン - 緑の背景色
+ * ターシャリボタン - 緑の背景色（アクセント用）
  */
-export const Green: Story = {
+export const Tertiary: Story = {
   args: {
     label: "Subscribe to news",
-    variant: "green",
+    variant: "tertiary",
   },
   parameters: {
     docs: {
       description: {
-        story: "アクセントとして使用するグリーンボタン。緑の背景色。",
+        story:
+          "アクセントとして使用するターシャリボタン。緑の背景色（#B9FF66）に黒いテキスト。",
       },
     },
   },
@@ -111,7 +138,7 @@ export const AllVariants: Story = {
     const variants: ButtonArgs[] = [
       { label: "プライマリ", variant: "primary" },
       { label: "セカンダリ", variant: "secondary" },
-      { label: "グリーン", variant: "green" },
+      { label: "ターシャリ", variant: "tertiary" },
     ];
 
     for (const args of variants) {

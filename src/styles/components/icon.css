@@ -1,0 +1,22 @@
+/* Icon Component */
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon__image {
+  display: block;
+  max-width: none;
+}
+
+/* ホバー時のインタラクション（任意） */
+.icon--interactive {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.icon--interactive:hover {
+  transform: scale(1.05);
+}
