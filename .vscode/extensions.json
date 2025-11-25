@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "biomejs.biome",
+    "github.copilot",
+    "unifiedjs.vscode-remark",
+    "ms-playwright.playwright",
+    "vitest.explorer"
+  ]
+}
