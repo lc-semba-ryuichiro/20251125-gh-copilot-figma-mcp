@@ -7,7 +7,7 @@ interface HeadingArgs {
 }
 
 /**
- * Creates a heading component
+ * 見出しコンポーネントを作成する
  */
 const createHeading = ({
   title,
@@ -41,16 +41,25 @@ const meta: Meta<HeadingArgs> = {
   title: "Components/Heading",
   tags: ["autodocs"],
   argTypes: {
-    title: { control: "text" },
-    description: { control: "text" },
-    showDescription: { control: "boolean" },
+    title: {
+      control: "text",
+      description: "見出しのタイトルテキスト",
+    },
+    description: {
+      control: "text",
+      description: "見出しの説明文",
+    },
+    showDescription: {
+      control: "boolean",
+      description: "説明文を表示するかどうか",
+    },
   },
   parameters: {
     layout: "padded",
     docs: {
       description: {
         component:
-          "Section heading with green label background. Used for all major sections.",
+          "緑色のラベル背景を持つセクション見出し。主要なセクションの見出しとして使用。",
       },
     },
   },
@@ -62,7 +71,7 @@ export default meta;
 type Story = StoryObj<HeadingArgs>;
 
 /**
- * Services section heading
+ * サービスセクションの見出し
  */
 export const Services: Story = {
   args: {
@@ -71,10 +80,17 @@ export const Services: Story = {
       "At our digital marketing agency, we offer a range of services to help businesses grow and succeed online. These services include:",
     showDescription: true,
   },
+  parameters: {
+    docs: {
+      description: {
+        story: "サービスセクション用の見出し。提供サービスの概要説明付き。",
+      },
+    },
+  },
 };
 
 /**
- * Case Studies section heading
+ * ケーススタディセクションの見出し
  */
 export const CaseStudies: Story = {
   args: {
@@ -83,10 +99,17 @@ export const CaseStudies: Story = {
       "Explore Real-Life Examples of Our Proven Digital Marketing Success through Our Case Studies",
     showDescription: true,
   },
+  parameters: {
+    docs: {
+      description: {
+        story: "ケーススタディセクション用の見出し。実績事例の紹介。",
+      },
+    },
+  },
 };
 
 /**
- * Team section heading
+ * チームセクションの見出し
  */
 export const Team: Story = {
   args: {
@@ -95,14 +118,28 @@ export const Team: Story = {
       "Meet the skilled and experienced team behind our successful digital marketing strategies",
     showDescription: true,
   },
+  parameters: {
+    docs: {
+      description: {
+        story: "チームセクション用の見出し。チームメンバーの紹介。",
+      },
+    },
+  },
 };
 
 /**
- * Heading without description
+ * 説明文なしの見出し
  */
 export const WithoutDescription: Story = {
   args: {
     title: "Our Working Process",
     showDescription: false,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: "説明文を省略した見出しパターン。",
+      },
+    },
   },
 };

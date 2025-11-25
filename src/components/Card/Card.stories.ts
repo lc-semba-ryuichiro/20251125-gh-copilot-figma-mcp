@@ -17,7 +17,7 @@ interface TeamCardArgs {
 }
 
 /**
- * Creates a service card
+ * サービスカードを作成する
  */
 const createServiceCard = ({
   variant,
@@ -35,7 +35,7 @@ const createServiceCard = ({
   const heading = document.createElement("div");
   heading.className = "service-card__heading";
 
-  // Label container
+  // ラベルコンテナ
   const labelContainer = document.createElement("div");
   labelContainer.className = "heading__label";
 
@@ -50,7 +50,7 @@ const createServiceCard = ({
   labelContainer.appendChild(label1);
   labelContainer.appendChild(label2);
 
-  // Link
+  // リンク
   const link = document.createElement("a");
   link.href = "#";
   link.className = `link ${variant === "dark" ? "link--white" : ""}`;
@@ -62,12 +62,12 @@ const createServiceCard = ({
   heading.appendChild(labelContainer);
   heading.appendChild(link);
 
-  // Illustration placeholder
+  // イラストのプレースホルダー
   const illustration = document.createElement("div");
   illustration.className = "service-card__illustration";
   illustration.style.cssText =
     "width: 210px; height: 170px; background: rgba(0,0,0,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center;";
-  illustration.textContent = "Illustration";
+  illustration.textContent = "イラスト";
 
   content.appendChild(heading);
   content.appendChild(illustration);
@@ -77,7 +77,7 @@ const createServiceCard = ({
 };
 
 /**
- * Creates a team card
+ * チームカードを作成する
  */
 const createTeamCard = ({ name, role, bio }: TeamCardArgs): HTMLElement => {
   const card = document.createElement("article");
@@ -108,7 +108,8 @@ const meta: Meta = {
     layout: "padded",
     docs: {
       description: {
-        component: "Card components with multiple variants and purposes.",
+        component:
+          "複数のバリエーションと用途を持つカードコンポーネント。サービス紹介やチームメンバー表示に使用。",
       },
     },
   },
@@ -120,7 +121,7 @@ type ServiceCardStory = StoryObj<ServiceCardArgs>;
 type TeamCardStory = StoryObj<TeamCardArgs>;
 
 /**
- * Grey service card
+ * グレーのサービスカード
  */
 export const ServiceCardGrey: ServiceCardStory = {
   args: {
@@ -133,13 +134,21 @@ export const ServiceCardGrey: ServiceCardStory = {
     variant: {
       control: "select",
       options: ["grey", "green", "dark", "white"],
+      description: "カードの背景色バリエーション",
     },
   },
   render: (args) => createServiceCard(args),
+  parameters: {
+    docs: {
+      description: {
+        story: "グレー背景のサービスカード。SEOサービスなどの紹介に使用。",
+      },
+    },
+  },
 };
 
 /**
- * Green service card
+ * グリーンのサービスカード
  */
 export const ServiceCardGreen: ServiceCardStory = {
   args: {
@@ -152,13 +161,21 @@ export const ServiceCardGreen: ServiceCardStory = {
     variant: {
       control: "select",
       options: ["grey", "green", "dark", "white"],
+      description: "カードの背景色バリエーション",
     },
   },
   render: (args) => createServiceCard(args),
+  parameters: {
+    docs: {
+      description: {
+        story: "グリーン背景のサービスカード。PPC広告などの紹介に使用。",
+      },
+    },
+  },
 };
 
 /**
- * Dark service card
+ * ダークのサービスカード
  */
 export const ServiceCardDark: ServiceCardStory = {
   args: {
@@ -171,13 +188,22 @@ export const ServiceCardDark: ServiceCardStory = {
     variant: {
       control: "select",
       options: ["grey", "green", "dark", "white"],
+      description: "カードの背景色バリエーション",
     },
   },
   render: (args) => createServiceCard(args),
+  parameters: {
+    docs: {
+      description: {
+        story:
+          "ダーク背景のサービスカード。SNSマーケティングなどの紹介に使用。",
+      },
+    },
+  },
 };
 
 /**
- * Team member card
+ * チームメンバーカード
  */
 export const TeamCard: TeamCardStory = {
   args: {
@@ -186,15 +212,31 @@ export const TeamCard: TeamCardStory = {
     bio: "10+ years of experience in digital marketing. Expertise in SEO, PPC, and content strategy",
   },
   argTypes: {
-    name: { control: "text" },
-    role: { control: "text" },
-    bio: { control: "text" },
+    name: {
+      control: "text",
+      description: "メンバーの名前",
+    },
+    role: {
+      control: "text",
+      description: "メンバーの役職",
+    },
+    bio: {
+      control: "text",
+      description: "メンバーの紹介文",
+    },
   },
   render: (args) => createTeamCard(args),
+  parameters: {
+    docs: {
+      description: {
+        story: "チームメンバーの紹介カード。名前、役職、紹介文を表示。",
+      },
+    },
+  },
 };
 
 /**
- * All service card variants
+ * 全サービスカードバリエーション
  */
 export const AllServiceCards: StoryObj = {
   render: () => {
@@ -232,5 +274,10 @@ export const AllServiceCards: StoryObj = {
   },
   parameters: {
     layout: "padded",
+    docs: {
+      description: {
+        story: "すべてのサービスカードバリエーションを並べて表示。",
+      },
+    },
   },
 };

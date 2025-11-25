@@ -11,7 +11,7 @@ interface InputArgs {
 }
 
 /**
- * Creates an input field
+ * 入力フィールドを作成する
  */
 const createInput = ({
   label,
@@ -52,21 +52,29 @@ const meta: Meta<InputArgs> = {
   title: "Components/Input",
   tags: ["autodocs"],
   argTypes: {
-    label: { control: "text" },
-    placeholder: { control: "text" },
+    label: {
+      control: "text",
+      description: "入力フィールドのラベル",
+    },
+    placeholder: {
+      control: "text",
+      description: "プレースホルダーテキスト",
+    },
     type: {
       control: "select",
       options: ["text", "email", "textarea"],
+      description: "入力タイプ",
     },
     variant: {
       control: "select",
       options: ["default", "dark"],
+      description: "カラーバリエーション",
     },
   },
   parameters: {
     docs: {
       description: {
-        component: "Input field component for forms.",
+        component: "フォーム用の入力フィールドコンポーネント。",
       },
     },
   },
@@ -78,7 +86,7 @@ export default meta;
 type Story = StoryObj<InputArgs>;
 
 /**
- * Text input
+ * テキスト入力
  */
 export const TextInput: Story = {
   args: {
@@ -87,10 +95,17 @@ export const TextInput: Story = {
     type: "text",
     variant: "default",
   },
+  parameters: {
+    docs: {
+      description: {
+        story: "標準的なテキスト入力フィールド。",
+      },
+    },
+  },
 };
 
 /**
- * Email input
+ * メール入力
  */
 export const EmailInput: Story = {
   args: {
@@ -99,10 +114,17 @@ export const EmailInput: Story = {
     type: "email",
     variant: "default",
   },
+  parameters: {
+    docs: {
+      description: {
+        story: "メールアドレス入力用フィールド。",
+      },
+    },
+  },
 };
 
 /**
- * Textarea
+ * テキストエリア
  */
 export const Textarea: Story = {
   args: {
@@ -111,10 +133,17 @@ export const Textarea: Story = {
     type: "textarea",
     variant: "default",
   },
+  parameters: {
+    docs: {
+      description: {
+        story: "複数行テキスト入力用のテキストエリア。",
+      },
+    },
+  },
 };
 
 /**
- * Dark variant for footer
+ * ダークバリエーション（フッター用）
  */
 export const DarkInput: Story = {
   args: {
@@ -125,11 +154,16 @@ export const DarkInput: Story = {
   },
   parameters: {
     backgrounds: { default: "dark" },
+    docs: {
+      description: {
+        story: "ダーク背景用の入力フィールド。フッターなどで使用。",
+      },
+    },
   },
 };
 
 /**
- * Complete form example
+ * フォーム例
  */
 export const FormExample: Story = {
   render: () => {
@@ -149,7 +183,7 @@ export const FormExample: Story = {
       form.appendChild(createInput(args));
     }
 
-    // Submit button
+    // 送信ボタン
     const button = document.createElement("button");
     button.type = "submit";
     button.className = "button button--primary button--full";
@@ -160,5 +194,10 @@ export const FormExample: Story = {
   },
   parameters: {
     layout: "padded",
+    docs: {
+      description: {
+        story: "複数の入力フィールドを組み合わせたフォームの例。",
+      },
+    },
   },
 };

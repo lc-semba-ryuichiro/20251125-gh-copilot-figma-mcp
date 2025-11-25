@@ -6,7 +6,7 @@ interface ButtonArgs {
 }
 
 /**
- * Creates a button element
+ * ボタン要素を作成する
  */
 const createButton = ({ label, variant }: ButtonArgs): HTMLButtonElement => {
   const button = document.createElement("button");
@@ -20,17 +20,21 @@ const meta: Meta<ButtonArgs> = {
   title: "Components/Button",
   tags: ["autodocs"],
   argTypes: {
-    label: { control: "text" },
+    label: {
+      control: "text",
+      description: "ボタンのラベルテキスト",
+    },
     variant: {
       control: "select",
       options: ["primary", "secondary", "green"],
+      description: "ボタンのスタイルバリエーション",
     },
   },
   parameters: {
     docs: {
       description: {
         component:
-          "Button component with multiple variants based on Positivus design system.",
+          "Positivus デザインシステムに基づいた複数のバリエーションを持つボタンコンポーネント。",
       },
     },
   },
@@ -42,37 +46,60 @@ export default meta;
 type Story = StoryObj<ButtonArgs>;
 
 /**
- * Primary button - Dark background, white text
+ * プライマリボタン - 暗い背景色、白いテキスト
  */
 export const Primary: Story = {
   args: {
     label: "Book a consultation",
     variant: "primary",
   },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          "メインのアクションに使用するプライマリボタン。暗い背景色に白いテキスト。",
+      },
+    },
+  },
 };
 
 /**
- * Secondary button - Outline style
+ * セカンダリボタン - アウトラインスタイル
  */
 export const Secondary: Story = {
   args: {
     label: "Request a quote",
     variant: "secondary",
   },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          "補助的なアクションに使用するセカンダリボタン。アウトラインスタイル。",
+      },
+    },
+  },
 };
 
 /**
- * Green button - Green background
+ * グリーンボタン - 緑の背景色
  */
 export const Green: Story = {
   args: {
     label: "Subscribe to news",
     variant: "green",
   },
+  parameters: {
+    docs: {
+      description: {
+        story: "アクセントとして使用するグリーンボタン。緑の背景色。",
+      },
+    },
+  },
 };
 
 /**
- * All variants displayed together
+ * 全バリエーション一覧
  */
 export const AllVariants: Story = {
   render: () => {
@@ -82,9 +109,9 @@ export const AllVariants: Story = {
     container.style.flexWrap = "wrap";
 
     const variants: ButtonArgs[] = [
-      { label: "Primary Button", variant: "primary" },
-      { label: "Secondary Button", variant: "secondary" },
-      { label: "Green Button", variant: "green" },
+      { label: "プライマリ", variant: "primary" },
+      { label: "セカンダリ", variant: "secondary" },
+      { label: "グリーン", variant: "green" },
     ];
 
     for (const args of variants) {
@@ -92,5 +119,12 @@ export const AllVariants: Story = {
     }
 
     return container;
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: "すべてのボタンバリエーションを並べて表示。",
+      },
+    },
   },
 };

@@ -1,0 +1,12 @@
+/* Logo Component */
+.logo {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo__image {
+  width: 220px;
+  height: 36px;
+  display: block;
+}
